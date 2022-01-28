@@ -11,10 +11,15 @@ exit
 ### Sklonuj repo (user)
 ```sh
 git clone https://github.com/breakermind/vue.git vue3
-cd vue3
 ```
 
-### Aktualizacja pakietów
+### Konfiguracja Laravel
+```sh
+cd vue3
+composer update
+```
+
+### Konfiguracja Vue
 ```sh
 vue upgrade --next
 ```
@@ -33,27 +38,37 @@ php artisan serve
 
 # Vue3 Laravel (Dev)
 ```sh
-# As root
+# Jako root
 su
 sudo apt install npm
 npm install -g @vue/cli
 exit
 
-# As user
+# Jako user
 composer create-project -prefer-dist laravel/laravel vue3
 
 cd vue3
+composer update
+
+php artisan migrate:fresh --seed
+php artisan migrate:fresh --seed --env=testing
+
 npm install vue@next --save
 npm install vue-router@4 --save
 npm install vuex@next --save
 npm install vue-loader@next --save-dev
 
-# Or
+# Aktualizacja
 vue upgrade --next
 
-# Set Vue in Laravel here ...
+# Ustawienia Vue w Laravel tutaj ...
 
+# Kompilacja vue npm
 npm install
-npm ci 
+npm ci
 npm run dev
+npm run watch
+
+# Lokalny server
+php artisan serve
 ```
