@@ -1,0 +1,17 @@
+.example {
+  background: url(/images/img.webp?97b5f7859a9e3ccfb772fbca33379725);
+}
+body {
+	margin: 0px;
+	padding: 20px;
+	color: #003399;
+	background: #00339903;
+}
+
+.info {
+	color: #fff;
+	background: #42b983;
+	padding: 25px 10px;
+	font-weight: 700;
+	font-size: 21px;
+}
