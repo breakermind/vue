@@ -1,0 +1,134 @@
+/*
+Set key binding:
+editor.action.inspectTMScopes -> CTRL+SHIFT+ALT+I
+Then:
+Click on editor scope and push: CTRL+SHIFT+ALT+I
+*/
+{
+	"window.titleBarStyle": "custom",
+	"git.enabled": false,
+	"git.autofetch": false,
+	"editor.fontSize": 14,
+	"editor.fontWeight": "400",
+	"editor.fontFamily": "'Monospace', 'Droid Sans Mono', 'Fira Code', 'Inconsolata', 'Source Code Pro', 'Liberation Mono'",
+	"editor.wordWrap": "off",
+	"editor.tabSize": 4,
+	"editor.insertSpaces": false,
+	"editor.detectIndentation": false,
+	"editor.autoClosingBrackets": "always",
+	"editor.autoClosingQuotes": "never",
+	"telemetry.enableTelemetry": false,
+	"workbench.enableExperiments": false,
+	"files.trimTrailingWhitespace": true,
+	"terminal.integrated.allowChords": false,
+	"update.mode": "none",
+	"extensions.autoUpdate": false,
+	"security.workspace.trust.untrustedFiles": "open",
+	"php.executablePath": "/usr/bin/php",
+	"php.memoryLimit": "256M",
+	"php.validate.executablePath": "/usr/bin/php",
+	"php.validate.run": "onSave",
+	"php.suggest.basic": false,
+	"php.validate.enable": true,
+	"intelephense.telemetry.enabled": false,
+	"intelephense.diagnostics.implementationErrors": false,
+	"intelephense.environment.phpVersion": "8.0",
+	"search.exclude": {
+		"**/.git/objects/": true,
+		"**/.git/subtree-cache/": true,
+		"**/node_modules/*/": true
+	},
+	"files.watcherExclude": {
+		"**/.git/objects/**": true,
+		"**/.git/subtree-cache/**": true,
+		"**/node_modules/*/**": true
+	},
+	"workbench.colorTheme": "GitHub Light Default",
+	"workbench.startupEditor": "none",
+	"workbench.tree.renderIndentGuides": "always",
+	"workbench.tree.indent": 18,
+	"workbench.colorCustomizations": {
+		"tree.indentGuidesStroke": "#8ea4c0",
+		"window.activeBorder": "#042d63",
+		"window.interactiveBorder": "#8ea4c0",
+	},
+	"workbench.hover.delay": 3000,
+	"editor.semanticHighlighting.enabled": false,
+	"editor.tokenColorCustomizations" : {
+		// "numbers": "#d7eb22",
+		// "comments": "#677ea8",
+		// "functions": "#ff3300",
+		"textMateRules": [
+			{
+				// Class definition methods color
+				"scope":"entity.name.function",
+				"settings": {
+					// "foreground": "#648f00",
+					// "fontStyle": "bold"
+				}
+			},
+			{
+				// Class object methods color
+				"scope": [
+					"meta.method-call.php entity.name.function.php",
+				],
+				"settings": {
+					// "foreground": "#ff3311",
+					// "foreground": "#ff906b",
+					// "foreground": "#db879c",
+					// "fontStyle": "bold",
+				}
+			},
+			{
+				// Comments
+				"scope": [
+					"comment",
+					"comment.block",
+					"punctuation.definition.comment",
+					"punctuation.definition.comment.end",
+					"punctuation.definition.comment.begin",
+					"punctuation.definition.comment.begin.documentation",
+					"punctuation.definition.comment.end.documentation",
+					"comment.block.documentation"
+				],
+				"settings": {
+					// "fontStyle": "italic",
+					// "foreground": "#bfc9d6",
+				}
+			},
+			// Php class: Request $req, Route::
+			{
+				"scope": [
+					"support.class.php",
+				],
+				"settings": {
+					// "foreground": "#e4c282",
+					// "fontStyle": "bold"
+				}
+			},
+			// namespace and use keywords
+			{
+				"scope": [
+					"keyword.other.namespace.php",
+					"keyword.other.use.php",
+				],
+				"settings": {
+					// "foreground": "#59999b",
+					// "fontStyle": "bold"
+				}
+			},
+			// namespace ClassName
+			{
+				"scope": [
+					"source.php meta.use support.class.php",
+				],
+				"settings": {
+					"foreground": "#a257f8",
+					// "foreground": "#82c5af",
+					// "foreground": "#ffcb6b",
+					// "fontStyle": "bold"
+				}
+			}
+		],
+	}
+}
