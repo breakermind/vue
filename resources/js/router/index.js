@@ -17,5 +17,5 @@ export default createRouter({
 	// history: VueRouter.createWebHashHistory(),
 	history: createWebHistory(),
 	routes,
-	linkActiveClass: "link-active",
+	linkActiveClass: "rlink-active",
 })

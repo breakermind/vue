@@ -24,14 +24,14 @@ export default {
 		console.log("Welcome component mounted."),
 		setInterval(() => {
 			this.counter++
-		}, 1000)		
+		}, 1000)
 	},
 	methods: {
-		getCounter() {			
+		getCounter() {
 			alert(this.counter)
 		}
 	},
-	computed: {		
+	computed: {
 		multiplyCounter () {
 			return this.counter * 2
 		}
