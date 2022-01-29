@@ -1,5 +1,7 @@
 <template>
 	<div class="content">
+		<top-menu />
+		
 		<div class="info" v-bind:title="title">{{ title }}</div>
 		<p>
 			Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -9,7 +11,12 @@
 	</div>
 </template>
 <script>
+import TopMenu from './forms/TopMenu.vue';
+
 export default {
+	components: {
+		TopMenu
+	},
 	data() {
 		return {
 			title: 'Profil component from Vue 3'

@@ -1,8 +1,10 @@
 <template>
 	<div class="content">
-		<div class="info" v-bind:title="title">{{ title }}</div>
+		<top-menu />
+
+		<div class="info" v-bind:title="title">{{ title }} </div>
 		<p>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+			Happy day? {{ this.$store.getters.freshAnswer }} :)
 		</p>
 
 		<p>Counter: {{ counter }}</p>
@@ -13,7 +15,12 @@
 	</div>
 </template>
 <script>
+import TopMenu from './forms/TopMenu.vue';
+
 export default {
+	components: {
+		TopMenu
+	},
 	data() {
 		return {
 			counter: 0,

@@ -1,5 +1,7 @@
 <template>
-	<div class="content">
+	<div class="content">		
+		<top-menu />
+
 		<div class="info">{{ title }}</div>
 		<p>
 			Page does not exists.
@@ -7,7 +9,12 @@
 	</div>
 </template>
 <script>
+import TopMenu from './forms/TopMenu.vue';
+
 export default {
+	components: {
+		TopMenu
+	},
 	setup: () => ({
 		title: 'Eror page 404'
 	})

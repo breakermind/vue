@@ -19,12 +19,7 @@
 
 	</head>
 	<body>
-		<div id="app">
-			<div class="tmenu">
-				<router-link to="/" class="rlink">Home</router-link>
-				<router-link to="/about" class="rlink">About</router-link>
-				<router-link to="/users/123" class="rlink">User profil</router-link>
-			</div>
+		<div id="app">			
 			<router-view></router-view>
 		</div>
 		<script src="{{ mix('js/app.js') }}"></script>
