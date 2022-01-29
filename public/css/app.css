@@ -1,2 +1,117 @@
-.example{background:url(/images/img.webp?97b5f7859a9e3ccfb772fbca33379725)}
-body{background:#00339903;color:#039;margin:0;padding:20px}.info{background:#42b983;color:#fff;font-size:21px;font-weight:700;padding:25px 10px}
+.example {
+  background: url(/images/img.webp?97b5f7859a9e3ccfb772fbca33379725);
+}
+* {
+	box-sizing: border-box;
+}
+
+:focus {outline:none;}
+::-moz-focus-inner {border:0;}
+
+body {
+	margin: 0px;
+	padding: 20px;
+	color: #2a5cc0;
+	background: #2a5cc003;
+}
+
+form {
+	float: left;
+	width: 100%;
+	margin: 10px 0px;
+	padding: 10px;
+	border: 1px solid #eee;
+}
+
+.form-title {
+	float: left;
+	width: 100%;
+	margin: 0px 0px 5px 0px;
+	font-weight: 700;
+}
+
+input, select, textarea {
+	float: left;
+	width: 100%;
+	margin: 5px 0px;
+	padding: 13px 20px;
+	border-radius: 6px;
+	color: #2a5cc0;
+	background: #2a5cc006;
+	border: 1px solid #2a5cc0;
+	transition: all .6s;
+}
+
+input:focus, select:focus, textarea:focus {
+	border: 1px dashed #3766c5;
+}
+
+input[type=submit] {
+	float: left;
+	width: 100%;
+	margin: 5px 0px;
+	padding: 13px 20px;
+	border-radius: 6px;
+	color: #fff;
+	background: #2a5cc0;
+	border: 1px solid #2a5cc0;
+	transition: all .6s;
+	cursor: pointer;
+}
+
+input[type=submit]:hover {
+	color: #fff;
+	background: #132241;
+}
+
+.info {
+	color: #fff;
+	background: #42b983;
+	padding: 10px 25px;
+	margin: 20px 0px;
+	font-weight: 700;
+	font-size: 21px;
+	border-radius: 6px;
+}
+
+.rlink {
+	float: left;
+	width: auto;
+	color: #42b983;
+	border: 2px solid #42b983;
+	border-radius: 6px;
+	padding: 13px 32px;
+	margin: 10px 5px;
+	font-weight: 700;
+	font-size: 15px;
+	cursor: pointer;
+	transition: all .6s;
+}
+
+.rlink:hover {
+	background: #42b98311;
+}
+
+.content, .tmenu {
+	float: left;
+	width: 100%;
+	padding: 10px;
+}
+
+button {
+	color: #42b983;
+	background: #fff;
+	border: 1px solid #42b983;
+	border-radius: 6px;
+	padding: 13px 42px;
+	margin: 0px 5px;
+	font-weight: 400;
+	font-size: 15px;
+	cursor: pointer;
+}
+
+.logout-btn {
+	color: #003399;
+	background: #fff;
+	border: 1px solid #003399;
+}

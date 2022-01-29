@@ -2,23 +2,20 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
 import About from '../components/About.vue'
+import UserProfil from '../components/UserProfil.vue'
 import Welcome from '../components/Welcome.vue'
+import NotFound from '../components/NotFound.vue'
 
 const routes = [
-	{
-		path: '/',
-		name: 'home',
-		component: Welcome
-	},
-	{
-		path: '/about',
-		name: 'about',
-		component: About
-	}
-	// , { path: '/:catchAll(.*)', component: NotFoundComponent, name: 'NotFound' }
+	{ path: '/', component: Welcome, name: 'home' },
+	{ path: '/about', component: About, name: 'about' },
+	{ path: '/users/:id', component: UserProfil, name: 'user.profil' },
+	{ path: '/:catchAll(.*)', component: NotFound, name: 'error.page' },
 ];
 
 export default createRouter({
+	// history: VueRouter.createWebHashHistory(),
 	history: createWebHistory(),
-	routes
+	routes,
+	linkActiveClass: "link-active",
 })

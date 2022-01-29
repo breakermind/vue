@@ -11,20 +11,22 @@
 
 		<!-- Styles -->
 		<style>
-			body { font-family: 'Exo', sans-serif; }			
+			body { font-family: 'Exo', sans-serif; }
 		</style>
 
 		<!-- Vue app style -->
 		<link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
 	</head>
-	<body class="antialiased">
-
-		<div id="app">			
-			<hello-world/>
+	<body>
+		<div id="app">
+			<div class="tmenu">
+				<router-link to="/" class="rlink">Home</router-link>
+				<router-link to="/about" class="rlink">About</router-link>
+				<router-link to="/users/123" class="rlink">User profil</router-link>
+			</div>
+			<router-view></router-view>
 		</div>
-
 		<script src="{{ mix('js/app.js') }}"></script>
-
 	</body>
 </html>
