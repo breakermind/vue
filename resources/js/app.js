@@ -4,8 +4,8 @@ require('./bootstrap');
 // Vue with router and store
 import { createApp } from 'vue'
 import options from './options.js'
-import router from './router/index.js'
 import store from './store/index.js'
+import router from './router/index.js'
 
 // Import component
 // import HelloWorld from './components/Welcome.vue';

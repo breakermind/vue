@@ -37,7 +37,7 @@ form {
 	box-shadow: 0px 1px 3px rgba(0,0,0,0.05);
 }
 
-error {
+.error {
 	float: left;
 	width: 100%;
 	margin: 5px 0px;

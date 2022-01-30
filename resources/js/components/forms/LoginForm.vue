@@ -6,7 +6,7 @@
 	>
 		<div class="form-title" :class="$attrs.class"> <i class="fas fa-star"></i> {{ title }}</div>
 		
-		<error v-show="error != ''"> {{ error }} </error>
+		<div class="error" v-show="error != ''"> {{ error }} </div>
 
 		<input v-model="email" placeholder="Email address">
 		<input v-model="password" type="password" placeholder="Password">
