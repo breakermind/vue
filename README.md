@@ -1,4 +1,5 @@
 # Vue 3
+Spa Vue 3 z Vuex 4 i routerem w Laravel 8.
 
 ### Instalacja npm i cli dla vue (root)
 ```sh
