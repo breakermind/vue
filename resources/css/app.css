@@ -31,8 +31,22 @@ form {
 	float: left;
 	width: 100%;
 	margin: 10px 0px;
-	padding: 10px;
-	border: 1px solid #eee;
+	padding: 20px;
+	background: #fff;
+	border: 1px solid #fff;
+	box-shadow: 0px 1px 3px rgba(0,0,0,0.05);
+}
+
+error {
+	float: left;
+	width: 100%;
+	margin: 5px 0px;
+	padding: 10px 15px;
+	color: #f23;
+	background: #ff223306;
+	border-radius: 6px;
+	font-size: 14px;
+	font-weight: 700;
 }
 
 .form-title {
@@ -40,13 +54,14 @@ form {
 	width: 100%;
 	margin: 0px 0px 5px 0px;
 	font-weight: 700;
+	font-size: 21px;
 }
 
 input, select, textarea {
 	float: left;
 	width: 100%;
 	margin: 5px 0px;
-	padding: 13px 20px;
+	padding: 15px 20px;
 	border-radius: 6px;
 	color: #2a5cc0;
 	background: #2a5cc006;

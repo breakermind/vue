@@ -5,6 +5,8 @@
 		@submit.prevent="onSubmit"
 	>
 		<div class="form-title" :class="$attrs.class">{{ title }}</div>
+		
+		<error v-show="error != ''"> {{ error }} </error>
 
 		<input v-model="email" placeholder="Email address">
 		<input v-model="password" type="password" placeholder="Password">
@@ -20,6 +22,7 @@ export default {
 		return {			
 			email: '',
 			password: '',
+			error: '',
 		}
 	},
 	methods: {
@@ -39,7 +42,7 @@ export default {
 				// Emit event
 				this.$emit('login-submited', credentials)
 			} else {
-				alert('Empty form!')
+				this.error = "Form can not be empty!"
 			}
 		},
 		// Get store from component
