@@ -4,7 +4,7 @@
 		class="login-form"
 		@submit.prevent="onSubmit"
 	>
-		<div class="form-title" :class="$attrs.class">{{ title }}</div>
+		<div class="form-title" :class="$attrs.class"> <i class="fas fa-star"></i> {{ title }}</div>
 		
 		<error v-show="error != ''"> {{ error }} </error>
 

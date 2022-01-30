@@ -7,13 +7,18 @@
 	</div>
 </template>
 <script>
-import TopMenu from './forms/TopMenu.vue';
-import LoginForm from './forms/LoginForm.vue';
+import { defineAsyncComponent } from 'vue'
+// import TopMenu from './forms/TopMenu.vue';
+// import LoginForm from './forms/LoginForm.vue';
 
 export default {
 	components: {
-		TopMenu,
-		LoginForm,		
+		TopMenu: defineAsyncComponent(() =>
+      		import('./forms/TopMenu.vue')
+    	),
+		LoginForm: defineAsyncComponent(() =>
+      		import('./forms/LoginForm.vue')
+    	)
 	},
 	data() {
 		return {
