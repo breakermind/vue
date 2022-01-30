@@ -38,6 +38,8 @@ php artisan serve
 ```
 
 # Vue3 Laravel (Dev)
+
+### Konfiguracja
 ```sh
 # Jako root
 su
@@ -72,4 +74,87 @@ npm run watch
 
 # Lokalny server
 php artisan serve
+```
+
+### Webpack.mix.js
+```js
+const mix = require('laravel-mix');
+
+mix.js('resources/js/app.js', 'public/js')
+	.vue()	
+	.postCss('resources/css/app.css', 'public/css', [])
+
+mix.sass('resources/sass/app.scss', 'public/css').options({
+	// processCssUrls: false
+});
+
+if (mix.inProduction()) {
+	mix.version();
+}
+
+// mix.js('resources/js/app.js', 'public/js')
+// 	.vue().postCss('resources/css/app.css', 'public/css', [])
+// 	.extract(['vue'])
+```
+
+### Plik app.js
+```js
+// Import axios
+require('./bootstrap');
+
+// Vue with router and store
+import { createApp } from 'vue'
+import options from './options.js'
+import router from './router/index.js'
+import store from './store/index.js'
+
+// Import component
+import HelloWorld from './components/Welcome.vue';
+
+// App options
+const app = createApp(options);
+
+// Add component
+app.component('hello-world', HelloWorld)
+
+// App mount
+app.use(store)
+app.use(router)
+app.mount('#app')
+```
+
+### Blade template
+```php
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Welcome!</title>
+
+		<!-- Fonts -->
+		<link href="https://fonts.googleapis.com/css2?family=Exo:wght@400;600;700&display=swap" rel="stylesheet">
+
+		<!-- Styles -->
+		<style>
+			body { font-family: 'Exo', sans-serif; }
+		</style>
+
+		<!-- Vue app style -->
+		<link rel="stylesheet" href="{{ mix('css/app.css') }}">
+	</head>
+	<body>
+	
+		<div id="app">
+			<!-- Component -->
+			<hello-world />
+
+			<!-- Router view -->
+			<router-view></router-view>
+		</div>
+
+		<script src="{{ mix('js/app.js') }}"></script>
+	</body>
+</html>
 ```
