@@ -98,6 +98,7 @@ if (mix.inProduction()) {
 ```
 
 ### Plik app.js
+resources/js/app.js
 ```js
 // Import axios
 require('./bootstrap');
@@ -145,7 +146,7 @@ app.mount('#app')
 		<link rel="stylesheet" href="{{ mix('css/app.css') }}">
 	</head>
 	<body>
-	
+
 		<div id="app">
 			<!-- Component -->
 			<hello-world />
