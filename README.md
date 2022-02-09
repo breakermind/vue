@@ -83,7 +83,26 @@ const mix = require('laravel-mix');
 mix.js('resources/js/app.js', 'public/js')
 	.vue()	
 	.postCss('resources/css/app.css', 'public/css', [])
+    .webpackConfig((webpack) => {
+		 return {
+			plugins: [
+				 new webpack.DefinePlugin({
+					VUE_OPTIONS_API: true,
+					VUE_PROD_DEVTOOLS: false,
 
+					// Vue js config console.log("Env", process.env.LOCALE_FALLBACK)
+					'process.env': {
+						// NODE_ENV: '"development"',
+						// ENDPOINT: '"http://localhost:3000"',
+						FOO: "'BAR'",
+						LOCALES: '"en|pl"', // Array with .split('|')
+						LOCALE_FALLBACK: '"en"'
+					}
+				}),
+			],
+		};
+	})
+    
 mix.sass('resources/sass/app.scss', 'public/css').options({
 	// processCssUrls: false
 });
